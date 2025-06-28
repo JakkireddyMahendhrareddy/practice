@@ -1,42 +1,49 @@
-// import React, { useState } from "react";
+import React, { useState } from "react";
 
-// const App = () => {
-//   const [ans, setAns] = useState({text:""});
-//   const [res, setResult] = useState([]);
+const App = () => {
+  const [ans, setAns] = useState({ text: "", age: "" });
+  const [res, setResult] = useState([]);
 
-//   function handleSubmit(e) {
-//     e.preventDefault();
-//     console.log(ans)
-//     setResult((prev) => [...prev, ans]);
-    
-//     setAns({text:""});
-//   }
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(ans)
+    setResult((prev) => [ ...prev, ans ]);
+    console.log(ans);
 
-//   return (
-//     <div className="flex flex-col justify-center items-center min-h-screen">
-//       <form onSubmit={handleSubmit}>
-//         <input
-//           type="text"
-//           value={ans.text}
-//           className="border-2 border-black"
-//           onChange={(e) => setAns({text:e.target.value})}
-//         />
-//         <button type="submit" className="border-2">
-//           Enter
-//         </button>
-//       </form>
-//       <div>
-//         <ul>
-//           {res.map((value, index) => (
-//             <li key={index}>{`${index+1})${value.text}`}</li>
-//           ))}
-//         </ul>
-//       </div>
-//     </div>
-//   );
-// };
+    setAns({ text: "", age: "" });
+  }
 
-// export default App;
+  return (
+    <div className="flex flex-col justify-center items-center min-h-screen">
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={ans.text}
+          className="border-2 border-black"
+          onChange={(e) => setAns((prev)=>({...prev, text: e.target.value }))}
+        />
+        <input
+          type="number"
+          value={ans.age}
+          className="border-2 border-black"
+          onChange={(e) => setAns((prev)=>({ ...prev,age: e.target.value }))}
+        />
+        <button type="submit" className="border-2">
+          Submit
+        </button>
+      </form>
+      <div>
+        <ul>
+          {res.map((value, index) => (
+            <li key={index}>{`${index + 1}) My Name is ${value.text} age is ${value.age}`}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default App;
 
 //useState with string
 
