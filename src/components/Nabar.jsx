@@ -7,10 +7,16 @@
 //       <NavLink className="bg-white text-2xl text-black rounded-lg px-2" to="/">
 //         Home
 //       </NavLink>
-//       <NavLink className=" bg-white text-2xl text-black rounded-lg px-2" to="/about">
+//       <NavLink
+//         className=" bg-white text-2xl text-black rounded-lg px-2"
+//         to="/about"
+//       >
 //         About
 //       </NavLink>
-//       <NavLink className=" bg-white text-2xl text-black rounded-lg px-2" to="/contact">
+//       <NavLink
+//         className=" bg-white text-2xl text-black rounded-lg px-2"
+//         to="/contact"
+//       >
 //         Contact
 //       </NavLink>
 //     </div>
